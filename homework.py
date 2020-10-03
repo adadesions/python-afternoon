@@ -20,3 +20,6 @@ if isConvert == 'y':
     print("Robot: Thank you to talk to me.")
 else:
     print("Robot: Ok, Byeeeee~")
+
+
+# github.com/adadesions/python-afternoon
