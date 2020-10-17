@@ -1,8 +1,8 @@
-text = "Hello, Ada"
+text = input("Enter your secret: ")
 
 encode = ''
 decode = ''
-shift = 1
+shift = int(input("Enter a secret key (1-100): "))
 
 print("original text:", text)
 
@@ -20,3 +20,4 @@ for e in encode:
 
 print('Decode text:', decode)
 
+# Search: github adadesions, python-afternoon
