@@ -8,21 +8,27 @@ fullname = {
 }
 bot = ['r', 'p', 's'] # 0:r, 1:p, 2:s
 
-player = input("Rock [r], Paper [p], Scissors [s]: ")
-print("You choose:", fullname[player])
+while True:
+    player = input("Rock [r], Paper [p], Scissors [s], Exit [x]: ")
 
-botChoose = bot[random.randint(0, 2)]
-print('Bot:', fullname[botChoose])
+    if player == 'x':
+        print("Thanks for playing, see ya next time!")
+        break
 
-decision = player+botChoose
+    print("You choose:", fullname[player])
 
-winner = ''
+    botChoose = bot[random.randint(0, 2)]
+    print('Bot:', fullname[botChoose])
 
-if decision == 'rs' or decision == 'pr' or decision == 'sp':
-    winner = 'Player'
-elif decision == 'rp' or decision == 'ps' or decision == 'sr':
-    winner = 'Bot'
-else:
-    winner = 'Draw'
+    decision = player+botChoose
 
-print("The winner is the", winner)
+    winner = ''
+
+    if decision == 'rs' or decision == 'pr' or decision == 'sp':
+        winner = 'Player'
+    elif decision == 'rp' or decision == 'ps' or decision == 'sr':
+        winner = 'Bot'
+    else:
+        winner = 'Draw'
+
+    print("The winner is the", winner)
