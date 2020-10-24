@@ -14,19 +14,14 @@ print("You choose:", fullname[player])
 botChoose = bot[random.randint(0, 2)]
 print('Bot:', fullname[botChoose])
 
+decision = player+botChoose
+
 winner = ''
-if player == 'r' and botChoose == 'p':
-    winner = 'Bot'
-elif player == 'r' and botChoose == 's':
-    winner  = 'Player'
-elif player == 'p' and botChoose == 'r':
+
+if decision == 'rs' or decision == 'pr' or decision == 'sp':
     winner = 'Player'
-elif player == 'p' and botChoose == 's':
+elif decision == 'rp' or decision == 'ps' or decision == 'sr':
     winner = 'Bot'
-elif player == 's' and botChoose == 'r':
-    winner = 'Bot'
-elif player == 's' and botChoose == 'p':
-    winner = 'Player'
 else:
     winner = 'Draw'
 
