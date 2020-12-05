@@ -53,3 +53,5 @@ while True:
         score['draw'] += 1
 
     print("The winner is the", winner)
+
+    # https://github.com/adadesions/python-afternoon
